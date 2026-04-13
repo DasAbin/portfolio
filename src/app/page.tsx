@@ -134,7 +134,7 @@ export default function Home() {
             <div>
               <div className="flex justify-between items-start mb-6">
                 <Code2 className="w-10 h-10 text-[var(--color-accent)] opacity-80" />
-                <a href="#" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
+                <a href="https://github.com/DasAbin/YatraMind" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">YatraMind Platform</h3>
               <p className="text-[var(--color-text-secondary)] font-sans text-sm mb-6 leading-relaxed">
@@ -152,7 +152,7 @@ export default function Home() {
             <div>
               <div className="flex justify-between items-start mb-6">
                 <Code2 className="w-10 h-10 text-[var(--color-accent-secondary)] opacity-80" />
-                <a href="#" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
+                <a href="https://github.com/DasAbin/Saarthi.AI" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">Saarthi.AI</h3>
               <p className="text-[var(--color-text-secondary)] font-sans text-sm mb-6 leading-relaxed">
@@ -170,7 +170,7 @@ export default function Home() {
             <div>
               <div className="flex justify-between items-start mb-6">
                 <Code2 className="w-10 h-10 text-white opacity-80" />
-                <a href="#" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
+                <a href="https://github.com/DasAbin/DecodX-LLM" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">DecodX-LLM</h3>
               <p className="text-[var(--color-text-secondary)] font-sans text-sm mb-6 leading-relaxed">
@@ -179,6 +179,42 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-2 mt-auto pt-6">
               {['Gemini 1.5', 'FAISS', 'FastAPI', 'Python'].map((t) => (
+                <span key={t} className="text-xs font-sans text-white/60 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">{t}</span>
+              ))}
+            </div>
+          </GlassCard>
+
+          <GlassCard className="h-full flex flex-col justify-between">
+            <div>
+              <div className="flex justify-between items-start mb-6">
+                <Code2 className="w-10 h-10 text-[var(--color-accent)] opacity-80" />
+                <a href="https://github.com/DasAbin/LearnTrace-Personal-Learning-History-Tracker.git" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">LearnTrace</h3>
+              <p className="text-[var(--color-text-secondary)] font-sans text-sm mb-6 leading-relaxed">
+                Personal Learning History Tracker. Keep track of specific learnings, articles read, courses, and create your own curated learning history map.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-auto pt-6">
+              {['Next.js', 'React', 'Tailwind', 'TypeScript'].map((t) => (
+                <span key={t} className="text-xs font-sans text-white/60 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">{t}</span>
+              ))}
+            </div>
+          </GlassCard>
+
+          <GlassCard className="h-full flex flex-col justify-between">
+            <div>
+              <div className="flex justify-between items-start mb-6">
+                <Code2 className="w-10 h-10 text-[var(--color-accent-secondary)] opacity-80" />
+                <a href="https://github.com/DasAbin/Internship-Scrapper.git" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors"><ExternalLink className="w-5 h-5 text-white/50 hover:text-white" /></a>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Internship Scrapper</h3>
+              <p className="text-[var(--color-text-secondary)] font-sans text-sm mb-6 leading-relaxed">
+                Automated platform scrapper built to quickly discover and aggregate fresh internship opportunities from multiple job boards out there.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-auto pt-6">
+              {['Python', 'Web Scraping', 'Automation'].map((t) => (
                 <span key={t} className="text-xs font-sans text-white/60 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">{t}</span>
               ))}
             </div>
