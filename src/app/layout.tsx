@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Space_Grotesk } from "next/font/google";
+import CustomCursor from "@/components/CustomCursor";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -23,8 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark overflow-x-hidden cursor-none">
       <body className={`${outfit.variable} ${spaceGrotesk.variable} antialiased bg-[#050505] text-[#FAFAFA]`} suppressHydrationWarning>
+        <CustomCursor />
         {children}
       </body>
     </html>

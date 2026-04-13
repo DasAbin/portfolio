@@ -9,6 +9,7 @@ import { Mail, ExternalLink, Code2 } from "lucide-react";
 import HeroCanvas from "@/components/HeroCanvas";
 import GlassCard from "@/components/GlassCard";
 import MagneticButton from "@/components/MagneticButton";
+import OutlineFillText from "@/components/OutlineFillText";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -52,14 +53,14 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="relative h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden">
         <HeroCanvas />
-        <div className="z-10 flex flex-col items-center text-center px-6">
+        <div className="z-10 flex flex-col items-center text-center px-6 pointer-events-none mt-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30 mb-6 drop-shadow-2xl">
-              ABINDAS P
+            <h1 className="text-6xl md:text-8xl lg:text-[12rem] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30 mb-6 drop-shadow-2xl">
+              ABINDAS
             </h1>
           </motion.div>
           
@@ -68,7 +69,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <p className="text-xl md:text-2xl font-sans text-[var(--color-text-secondary)] mb-12 max-w-2xl font-light">
+            <p className="text-xl md:text-3xl font-sans text-[var(--color-text-secondary)] mb-12 max-w-2xl font-light">
               Building at the intersection of <span className="text-white font-medium">AI</span> and the <span className="text-[var(--color-accent)] font-medium text-stroke">web</span>.
             </p>
           </motion.div>
@@ -77,6 +78,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.2, type: "spring" }}
+            className="pointer-events-auto"
           >
             <MagneticButton onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
               View Projects
@@ -104,10 +106,12 @@ export default function Home() {
         >
           <div className="lg:w-1/2">
             <h2 className="text-sm font-sans tracking-[0.2em] text-[var(--color-accent)] uppercase mb-6">/ About</h2>
-            <h3 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-8">
-              Sophomore Engineer architecting scalable backends & RAG-based LLM services.
-            </h3>
-            <p className="text-lg text-[var(--color-text-secondary)] font-sans leading-relaxed">
+            <div className="mb-8 flex flex-col gap-2">
+              <OutlineFillText text="Sophomore" className="text-5xl md:text-7xl lg:text-[5rem]" />
+              <OutlineFillText text="Engineer &" className="text-5xl md:text-7xl lg:text-[5rem]" />
+              <OutlineFillText text="Architect." className="text-5xl md:text-7xl lg:text-[5rem]" />
+            </div>
+            <p className="text-lg md:text-xl text-[var(--color-text-secondary)] font-sans leading-relaxed">
               I am a CS student at AIT Pune, specializing in Full Stack Development and AI-driven System Design. Currently the Lead Developer for a national-level SIH '25 Finalist platform. I excel at building real-world solutions using AWS serverless architectures, robust backend engines, and modern frontend frameworks.
             </p>
           </div>
