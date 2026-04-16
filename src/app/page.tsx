@@ -10,6 +10,7 @@ import HeroCanvas from "@/components/HeroCanvas";
 import GlassCard from "@/components/GlassCard";
 import MagneticButton from "@/components/MagneticButton";
 import OutlineFillText from "@/components/OutlineFillText";
+import ParticleText from "@/components/ParticleText";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -93,6 +94,14 @@ export default function Home() {
         >
           <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
         </motion.div>
+      </section>
+
+      {/* 1.5. PARTICLE TEXT EXPERIMENT */}
+      <section className="relative w-full py-16">
+        <h2 className="text-sm font-sans tracking-[0.2em] text-[var(--color-accent)] uppercase mb-8 text-center">/ Interactive Particles</h2>
+        <div className="max-w-6xl mx-auto px-6">
+          <ParticleText />
+        </div>
       </section>
 
       {/* 2. ABOUT SECTION */}
